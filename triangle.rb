@@ -15,6 +15,15 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  sorted = [a,b,c].sort
+  raise TriangleError.new if 
+    sorted[0] <= 0 || sorted[0] + sorted[1] <= sorted[2]
+
+  case[a,b,c].uniq.size
+  when 1 then :equilateral
+  when 2 then :isosceles
+  else :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
