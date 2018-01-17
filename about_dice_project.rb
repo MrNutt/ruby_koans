@@ -4,6 +4,10 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 #
 class DiceSet
   
+  def initialize
+    @arr = Array.new
+  end
+
   def roll n
     @arr = Array.new
     (1..n).each do 
